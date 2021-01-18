@@ -1,12 +1,10 @@
-import { FETCH_PRODUCT } from "../Type";
+import { FETCH_PRODUCTS } from "../Type";
 
-export const fetchProducts= () => {
-    return  async (dispatch)=>{
+export const fetchProducts= () =>async(dispatch)=> {
         const res=await fetch("/api/products");
+        const data=await res.json();
          dispatch({
-            type:FETCH_PRODUCT,
-            payload:res.data,
-        })
-    }
-    
-}
+            type:FETCH_PRODUCTS,
+            payload:data,
+        });
+};

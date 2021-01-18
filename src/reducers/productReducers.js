@@ -1,8 +1,8 @@
-import { FETCH_PRODUCT } from "../Type";
+import { FETCH_PRODUCTS } from "../Type";
 
 export const productsReducer=(state={},action)=>{
     switch(action.type){
-        case FETCH_PRODUCT  :
+        case FETCH_PRODUCTS:
             return{
                 items: action.payload
             }
