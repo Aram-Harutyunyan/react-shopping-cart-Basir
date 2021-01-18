@@ -78,7 +78,7 @@ class App extends React.Component {
             sort={this.state.sort}
             filterProducts={this.filterProducts}
             sortProducts={this.sortProducts} />
-            <Products products={this.state.products} addToCart={this.addToCart} />
+            <Products  addToCart={this.addToCart} />
           </div>
           <div className="sidebar">
             <Cart cartItems={this.state.cartItems} removeFromCart={this.removeFromCart} createOrder={this.createOrder} />
